@@ -793,6 +793,10 @@ public:
 	bool isValueType() const override { return !isSuper(); }
 	std::string toString(bool _short) const override;
 	std::string canonicalName() const override;
+	virtual std::string signatureInExternalFunction(bool /*_structsByName*/) const override
+	{
+		return "address";
+	}
 
 	MemberList::MemberMap nativeMembers(ContractDefinition const* _currentScope) const override;
 	TypePointer encodingType() const override

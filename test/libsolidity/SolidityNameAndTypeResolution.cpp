@@ -254,7 +254,7 @@ BOOST_AUTO_TEST_CASE(external_struct_signatures_in_libraries)
 			auto functions = contract->definedFunctions();
 			BOOST_REQUIRE(!functions.empty());
 			BOOST_CHECK_EQUAL("f(Test.ActionChoices,uint256,Test.Simple)", functions[0]->externalSignature());
-			BOOST_CHECK_EQUAL("g(Test,Test.Nested)", functions[1]->externalSignature());
+			BOOST_CHECK_EQUAL("g(address,Test.Nested)", functions[1]->externalSignature());
 			BOOST_CHECK_EQUAL("h(function[])", functions[2]->externalSignature());
 			BOOST_CHECK_EQUAL("i(Test.Nested[])", functions[3]->externalSignature());
 		}
